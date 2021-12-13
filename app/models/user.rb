@@ -4,4 +4,6 @@ class User < ApplicationRecord
          :jwt_authenticatable,
          :registerable,
          jwt_revocation_strategy: JwtDenylist
+  has_many :banneds
+  has_many :reserved_cars
 end
