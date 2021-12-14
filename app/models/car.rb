@@ -18,8 +18,7 @@ class Car < ApplicationRecord
       background_color: background_color,
       price: price,
       image: get_image_url,
-      horse_power: horse_power,
-      created_at: created_at,
-      update_at: updated_at }
+      horse_power: horse_power
+    }
   end
 end
