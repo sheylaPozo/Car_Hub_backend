@@ -6,6 +6,7 @@ Rails.application.routes.draw do
              }
   get '/member-data', to: 'members#show'
   get '/models', to: 'cars#index'
+  get 'models/:id', to: 'cars#show'
   get '/models_b', to: 'cars#custom_index'
   post '/ban', to: 'banneds#toggle'
   get '/list', to: 'cars#list'

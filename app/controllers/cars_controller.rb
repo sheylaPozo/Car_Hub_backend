@@ -5,6 +5,10 @@ class CarsController < ApplicationController
     render json: Car.all
   end
 
+  def show
+    render json: Car.find(params[:id])
+  end
+
   def list
     if user_signed_in?
       banneds_ids = current_user.banneds.pluck(:car_id)
