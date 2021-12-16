@@ -80,6 +80,7 @@ Accept next format
   "name": name
   "description": description
   "price": price
+  "fee": fee
   "horse_power": horse_power
   "background_color": hexColor
   "image": image
