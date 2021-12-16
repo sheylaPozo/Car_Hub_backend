@@ -12,6 +12,8 @@ class ReservedCar < ApplicationRecord
       description: car.description,
       image: car.image_url,
       date: date,
-      country: country }
+      country: country,
+      total_price: car.total_price
+    }
   end
 end

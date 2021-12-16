@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_182840) do
     t.string "background_color"
     t.decimal "price"
     t.integer "horse_power"
+    t.decimal "fee"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

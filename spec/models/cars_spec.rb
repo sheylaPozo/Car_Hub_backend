@@ -9,6 +9,7 @@ RSpec.describe Car, type: :model do
       @car.name = 'Valkyrie'
       @car.background_color = '#F9F5F6'
       @car.price = 356_176.45
+      @car.fee = 451.24
       @car.horse_power = 1140
       @car.description = 'An incredibly special car with an equally remarkable name. One that immediately evokes connotations of power and honor, of being chosen by the Gods. Only 150 road cars will be made. Valkyrie is Aston Martin’s first hypercar'
       @car.image.attach(io: File.open('seedImages/Valk.png'), filename: "#{Car.count}.png")
@@ -45,6 +46,16 @@ RSpec.describe Car, type: :model do
 
     it 'Horse Power should be a number with a value over 0' do
       @car.horse_power = 4
+      expect(@car.valid?).to eq(true)
+    end
+
+    it 'Price should be a number with a value over 0' do
+      @car.price = 4
+      expect(@car.valid?).to eq(true)
+    end
+
+    it 'Fee should be a number with a value over 0' do
+      @car.fee = 4
       expect(@car.valid?).to eq(true)
     end
 
