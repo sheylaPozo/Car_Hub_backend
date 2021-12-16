@@ -9,7 +9,7 @@ class Car < ApplicationRecord
   validates :description, presence: true, length: { maximum: 250, too_long: 'the description must not exceed 250 characters' }
   validates :price, numericality: { greater_than: 0 }
   validates :horse_power, numericality: { greater_than: 0 }
-  validates :background_color, presence: true, format: { with: /\A#[0123456789ABCDFabcdf]{6}\Z/, message: "please enter keywords in correct format"}
+  validates :background_color, presence: true, format: { with: /\A#[0123456789ABCDFabcdf]{6}\Z/, message: 'please enter keywords in correct format' }
 
   def image_url
     image.service_url
