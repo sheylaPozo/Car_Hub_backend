@@ -37,7 +37,6 @@ This let you create a reservation of the user, if it successful it will display
 }
 ```
 in case of error will return status 500 or 404
-```
 
 Also will display an error if the user is not connected or the id is not a number
 
@@ -46,15 +45,16 @@ Also will display an error if the user is not connected or the id is not a numbe
 ### `POST https://carhubackend.herokuapp.com/reserved/delete`
 
 get the next format
-
+```
 {
   "reserved_id": reserved_id
 }
-
+```
 It will delete a reservation of the current connected user, if the reservation is on the list of the user, it will be deelted and show the next message
 
-render json: { message: 'Reservation Deleted' }
-
+```
+{ message: 'Reservation Deleted' }
+```
 if the reservation is not in the user list, it will return an 404 status
 
 if the user is not connected will return a message saying the user is not connected
