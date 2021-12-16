@@ -95,4 +95,4 @@ Give a ⭐️ if you like this project!
 
 # Documentation
 
-To look at the documentation of API click [here](docs/DOCUMENTATION.md)
+To look at the documentation of the API click [here](docs/DOCUMENTATION.md)
