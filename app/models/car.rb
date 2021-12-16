@@ -2,12 +2,14 @@
 
 class Car < ApplicationRecord
   has_one_attached :image
-
   validates :image, {
     presence: true
   }
-  validates :name, length: { maximum: 100, too_long: 'the name must not exceed 100 characters' }
-  validates :description, length: { maximum: 250, too_long: 'the description must not exceed 250 characters' }
+  validates :name, presence: true, length: { maximum: 100, too_long: 'the name must not exceed 100 characters' }
+  validates :description, presence: true, length: { maximum: 250, too_long: 'the description must not exceed 250 characters' }
+  validates :price, numericality: { greater_than: 0 }
+  validates :horse_power, numericality: { greater_than: 0 }
+  validates :background_color, presence: true, format: { with: /\A#[0123456789ABCDFabcdf]{6}\Z/, message: "please enter keywords in correct format"}
 
   def image_url
     image.service_url
