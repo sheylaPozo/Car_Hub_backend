@@ -1,4 +1,4 @@
-# Recipe App
+# CarHub API
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
@@ -43,7 +43,6 @@ rails db:migrate
 # Load the schema
 rails db:schema:load
 ```
-
 ### Run
 
 ```sh
@@ -94,3 +93,6 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 
+# Documentation
+
+To look at the documentation of API click [here](docs/DOCUMENTATION.md)
