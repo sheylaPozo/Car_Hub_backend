@@ -17,7 +17,7 @@ class Car < ApplicationRecord
   end
 
   def total_price
-    price+fee
+    price + fee
   end
 
   def as_json(_options = {})
