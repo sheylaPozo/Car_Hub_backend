@@ -5,6 +5,7 @@ class CreateCars < ActiveRecord::Migration[6.1]
       t.string :background_color
       t.decimal :price
       t.integer :horse_power
+      t.decimal :fee
       t.text :description
       t.timestamps
     end

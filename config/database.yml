@@ -61,6 +61,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  database: CarsHubTest
   username: postgres
   password: postgres
 
@@ -86,6 +87,6 @@ test:
 #
 production:
   <<: *default
-  database: ruby_blog_production
+  database: CarsHub
   username: ruby_blog
   password: <%= ENV['RUBY_BLOG_DATABASE_PASSWORD'] %>
