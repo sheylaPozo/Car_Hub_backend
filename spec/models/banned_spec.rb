@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe ReservedCar, type: :model do
+RSpec.describe Banned, type: :model do
   describe 'validates' do
     before :each do
         @car =Car.new
@@ -15,37 +15,22 @@ RSpec.describe ReservedCar, type: :model do
 
         @user = User.new(email: 'test@example.com', password:"123456789")
 
-        @reserved_car = ReservedCar.new(car:@car, user:@user, date:"1-1-2001", country:"Guatemala")
+        @banned = Banned.new(car:@car, user:@user)
       end
 
       
     it 'expect user to be valid' do
-        expect(@reserved_car).to be_valid
-      end
-
-      it 'expect Country to be a string of maximun twenty characters' do
-        @reserved_car.country="012345678901234567891"
-        expect(@reserved_car.valid?).to eq(false) 
-      end
-
-      it 'expect Country to be a string of maximun twenty characters' do
-        @reserved_car.country="012345678901234567891"
-        expect(@reserved_car.valid?).to eq(false) 
-      end
-
-      it 'expect date to have a date format' do
-        @reserved_car.date="012345678901234567891"
-        expect(@reserved_car.valid?).to eq(false) 
+        expect(@banned).to be_valid
       end
 
       it 'the model should have a user to be valid' do
-        @reserved_car.user = nil
-        expect(@reserved_car.valid?).to eq(false)
+        @banned.user = nil
+        expect(@banned.valid?).to eq(false)
       end
 
       it 'the model should have a car to be valid' do
-        @reserved_car.car = nil
-        expect(@reserved_car.valid?).to eq(false)
+        @banned.car = nil
+        expect(@banned.valid?).to eq(false)
       end
     end
 end
