@@ -10,7 +10,7 @@ class Car < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   validates :fee, numericality: { greater_than: 0 }
   validates :horse_power, numericality: { greater_than: 0 }
-  validates :background_color, presence: true, format: { with: /\A#[0123456789ABCDFabcdf]{6}\Z/, message: 'please enter keywords in correct format' }
+  validates :background_color, presence: true, format: { with: /\A#[0123456789ABCDEFabcdef]{6}\Z/, message: 'please enter keywords in correct format' }
 
   def image_url
     image.service_url
