@@ -33,6 +33,21 @@ class CarsController < ApplicationController
     end
   end
 
+  def create
+    car = Car.new
+    car.name = params[:name]
+    car.description = params[:description]
+    car.background_color = params[:background_color]
+    car.price = params[:price]
+    car.image = params[:image]
+    car.horse_power = params[:horse_power]
+    if car.save
+      render json: { message: 'Car saved!' }
+    else
+      render json: { message: 'invalid parameters' }
+    end
+  end
+
   def custom_index
     if user_signed_in?
       banneds_ids = current_user.banneds.pluck(:car_id)
