@@ -255,6 +255,7 @@ DEPENDENCIES
   devise-jwt
   dotenv-rails
   image_processing (~> 1.2)
+  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
