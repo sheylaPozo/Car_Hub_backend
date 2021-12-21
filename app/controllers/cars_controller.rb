@@ -22,9 +22,9 @@ class CarsController < ApplicationController
         ncar.description = car.description
         ncar.background_color = car.background_color
         ncar.price = car.price
-        ncar.image = car.get_image_url
         ncar.horse_power = car.horse_power
         ncar.banned = banneds_ids.include? car.id
+        ncar.image = car.image_url
         result.push(ncar)
       end
       render json: result
