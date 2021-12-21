@@ -15,7 +15,7 @@ Will display the The data of only one car
 
 Requires the user to be connected, it will display a list of the reserved cars, including some information of the car aside the data of the reservation itself, like the country and date
 
-## Ban
+## Reserve
 
 ### `POST https://carhubackend.herokuapp.com/reserved`
 
