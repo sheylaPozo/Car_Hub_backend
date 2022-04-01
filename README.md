@@ -5,6 +5,10 @@
 > This is the backend of the CarHub page, it have all models of the database, and the app endpoints
 
 The CarHub app let you create cars, reserve them and share it with other users, let you see cars in a list, and the ability to reserve them.
+---
+## Image preview screenshot: 
+
+![carhub](https://user-images.githubusercontent.com/54015740/161332524-c176f0f8-d3ca-4cfe-93b3-aee2d49eb923.png)
 
 ## Built With
 
